@@ -1,0 +1,125 @@
+#cover-box {
+    margin: auto;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-box {
+    position: relative;
+    margin: auto;
+    /*margin-top: 35dvh;*/
+    inset: 0;
+    /*margin-bottom: 40vh;*/
+    width: fit-content;
+}
+
+#hi {
+    margin-left: -18%;
+    font-family: "Chonburi", serif;
+    /*font-family: "Montserrat", sans-serif;
+    font-weight: 700;*/
+    font-size: 14px;
+}
+
+#joey {
+    margin-left: 0%;
+}
+
+#cheung {
+    margin-left: 1%;
+    margin-bottom: -35px;
+}
+
+#title-star {
+    width: var(--star-w);
+    margin-top: 1%;
+    margin-left: 100%;
+}
+
+#slogan {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    text-align: center;
+}
+
+#arrow {
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    border-left: 1px solid var(--color-text-2);
+    border-bottom: 1px solid var(--color-text-2);
+    rotate: -45deg;
+    animation: hovering 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes hovering {
+    0% {
+        transform: translateY(0,0);
+    }
+    100% {
+        transform: translate(-10px, 10px);
+    }
+}
+
+#arrow:hover {
+    border-left-color: var(--color-text);
+    border-bottom-color: var(--color-text);
+}
+
+
+
+#constellation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+#constellation img {
+    position: absolute;
+    width: 10px;
+}
+#star1 {top: -31%;left: 60%;}
+#star2 {top: -20%;left: 75%;}
+#star3 {top: -15%;left: 40%;}
+#star4 {top: 14%;left: 74%;}
+#star5 {top: 18%;left: 71%;}
+#star6 {top: 21%;left: 67%;}
+#star7 {top: 58%;left: 70%;}
+
+
+
+@media only screen and (max-width: 700px) {
+    #cheung {
+        margin-bottom: -5vw;
+    }
+
+    #hi {
+        margin-left: 0%;
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+
+    #title-star {
+        width: 2.9vw;
+    }
+    
+    #slogan {
+        font-size: 2vw;
+    }
+
+    #arrow {
+        width: 2.1vw;
+        height: 2.1vw;
+        border-left-width: 0.2vw;
+        border-bottom-width: 0.2vw;    }
+
+    #constellation img {
+        margin-top: 5px;
+        width: 1.4vw;
+    }
+}

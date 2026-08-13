@@ -1,0 +1,65 @@
+#logo-box {
+    display: flex;
+}
+
+
+
+.logo-svg {
+    margin-top: -5px;
+    margin-bottom: auto;
+    height: 30px;
+}
+/* 
+.logo-star {    
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 20px;
+} */
+
+
+
+.logo-long {
+    display: block;
+}
+
+.logo-short {
+    display: none;
+}
+
+.logo-joey {
+    margin-top: -10px;
+    margin-right: -1px;
+
+    font-family: 'Pecita', sans-serif;
+    font-size: 25px;
+}
+
+.logo-cheung {
+    margin-top: 5px;
+    margin-left: -5px;
+
+    font-family: 'Pecita', sans-serif;
+    font-size: 25px;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .logo-short { 
+        display: block; 
+    }
+
+    .logo-long {
+        display: none;
+    }
+
+    .logo-joey {
+        margin-top: -20px;
+        margin-right: -5px;
+    }
+
+    .logo-cheung{
+        margin-top: 5px;
+        margin-left: -5px;
+    }
+}

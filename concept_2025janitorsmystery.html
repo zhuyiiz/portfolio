@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>joey's portfolio</title> 
+	<meta name="viewport" content="width=device-width" />
+
+	<script src="js/script.js"></script>
+
+	<link rel="stylesheet" href="css/0all.css">
+	<link rel="stylesheet" href="css/0all_logo.css">
+	<link rel="stylesheet" href="css/0all_navbar.css">
+	<link rel="stylesheet" href="css/0all_footer.css">
+
+	<link rel="stylesheet" href="css/heading.css">
+	<link rel="stylesheet" href="css/proj_gallery.css">
+
+	<style>@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
+	<link href="https://fonts.cdnfonts.com/css/pecita" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+</head> 
+<body> 
+	<div id="nav-entire">
+		<div id="logo-box">
+			<audio id="sound-star" src="sparkle.wav" autostart="false"></audio>
+			<a href="home.html"><img src="img/logo.svg" alt="logo" class="logo-svg"></a>
+		</div>
+
+		<div class="menu-box">
+			<a class="menu-icon" onclick="clickMenuDropdown()">
+                <span id="bar1" class="menu-bar"></span>
+				<span id="bar2" class="menu-bar"></span>
+				<span id="bar3" class="menu-bar"></span>
+			</a>
+
+			<div id="menu-dropdown">
+				<ul class="menu-ul">
+					<li><a class="menu-links" href="illust.html">illustration</a></li>
+					
+					<div class="submenu-dropdown" onclick="clickSubMenuDropdown(this)"onmouseenter="hoverSubMenuDropdown(this)" onmouseleave="leaveSubMenuDropdown(this)">
+						<li><a class="menu-links" href="concept.html">concept</a></li>
+						<ul class="submenu-ul">
+							<li><a class="menu-links" href="concept_2026beyondnova.html">beyond nova [2026]</a></li>
+							<li><a class="menu-links current-page" href="concept_2025janitorsmystery.html">janitor's mystery [2025]</a></li>
+							<li><a class="menu-links" href="concept_2025hungrylegs.html">hungry legs [2025]</a></li>
+							<li><a class="menu-links" href="concept_2024constantoutput.html">constant output [2024]</a></li>
+						</ul>
+					</div>
+					<div class="submenu-dropdown" onclick="clickSubMenuDropdown(this)"onmouseenter="hoverSubMenuDropdown(this)" onmouseleave="leaveSubMenuDropdown(this)">
+						<li><a class="menu-links" href="motion.html">motion</a></li>
+						<ul class="submenu-ul">
+							<li><a class="menu-links" href="motion_2026beyondnova.html">beyond nova [2026]</a></li>
+							<li><a class="menu-links" href="motion_2026onemancircus.html">one man circus [2026]</a></li>
+							<li><a class="menu-links" href="motion_2026mytriptosydney.html">my trip to sydney [2026]</a></li>
+						</ul>
+					</div>
+					
+                    <li><a class="menu-links" href="about.html">about</a></li>
+					<li><a class="menu-links" href="contact.html">contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div id="img-box">
+		<div id="heading-box">
+			<h2 id="heading-text">janitor's mystery</h2>
+			<img src="img/STAR.png" alt="STAR" id="heading-star" onclick="starAudio();">
+		</div>
+
+		<p class="heading-desc">Concept and Illustration work done for a singleplayer mystery game where a janitor visits an abandoned school to clean up the facility, unveiling a secret in the process. Collaborated with Johnathan Huang & Hailee Yun.</p>
+		<div id="heading-info">
+			<div id="heading-tools">
+				<div class="heading-tool"><h4>Clip Studio Paint</h4></div>
+				<div class="heading-tool"><h4>Game Maker</h4></div>
+			</div>
+			<div id="heading-skills">
+				<div class="heading-skill"><h4>Game Development</h4></div>
+				<div class="heading-skill"><h4>Concept Design</h4></div>
+				<div class="heading-skill"><h4>Illustration</h4></div>
+			</div>
+		</div>
+	</div>
+
+    <div id="projects-box">
+        <div id="projects-list"></div>
+		
+		<div id="projects-images">
+			<!-- <img class="proj-img" src="img/janitor's mystery/jm_classroom1.png" alt="img1"> -->
+			<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_doors.png" alt="img2"></div>
+			<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_classroom1_closed.png" alt="img2"></div>
+			<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_classroom1_open.png" alt="img2"></div>
+			
+			<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_classroom2.png" alt="img2"></div>
+			<div class="flex-row">
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_classroom2_beakerpuzzle.png" alt="img2"></div>
+				<p>include image of beaker being filled up</p>
+			</div>			
+			
+			<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_classroom3.png" alt="img2"></div>
+			<div class="flex-row">
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_classroom3_book1.png" alt="img2"></div>
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_classroom3_book2.png" alt="img2"></div>
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_classroom3_book3.png" alt="img2"></div>
+			</div>
+			<div class="flex-row">
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_locker_closed.png" alt="img2"></div>
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jm_locker_open.png" alt="img2"></div>
+			</div>
+			
+			<p>early styles</p>
+			<div class="flex-row">
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jmconcept_1.png" alt="img2"></div>
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jmconcept_2.png" alt="img2"></div>
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jmconcept_3.png" alt="img2"></div>
+			</div>
+			<div class="flex-row">
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jmconcept_4.png" alt="img2"></div>
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jmconcept_5.png" alt="img2"></div>
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jmconcept_6.png" alt="img2"></div>
+			</div>
+
+			<p>early concept</p>
+			<div class="flex-row">
+				<div class="proj-img-wrapper"><img class="proj-img" src="img/janitor's mystery/jmconcept_sketches1.jpg" alt="img2"></div>
+				<div class="proj-img-wrapper" id="i1"><img class="proj-img" src="img/janitor's mystery/jmconcept_sketches2.png" alt="img2"></div>
+			</div>
+		</div>
+		
+    </div>
+    <!-- thumbnails ver1
+        <div id="gallery">
+            <div class="itm1 thumbnails"><img src="img/illust5_whoiam.png" alt="illust" id="illust1"></div>
+            <div class="itm2 thumbnails"><img src="img/illust1_intriguing.png" alt="illust" id="illust2"></div>
+            <div class="itm3 thumbnails"><img src="img/illust2_icyglass.png" alt="illust" id="illust3"></div>
+            <div class="itm4 thumbnails"><img src="img/illust4_trainride.JPG" alt="illust" id="illust4"></div>
+        </div>
+        <div id="gallery">
+            <div class="itm1 thumbnails"><img src="img/con2_fishbass.png" alt="concept" id="concept1"></div>
+            <div class="itm2 thumbnails"><img src="img/con3_postman.png" alt="concept" id="concept2"></div>
+            <div class="itm3 thumbnails"><img src="img/con4_ruffles.png" alt="concept" id="concept3"></div>
+            <div class="itm4 thumbnails"><img src="img/con5_handsanitizer.png" alt="concept" id="concept4"></div>
+        </div>
+        <div id="gallery">
+            <div class="itm1 thumbnails"><img src="img/visf3_album.png" alt="illust"></div>
+            <div class="itm2 thumbnails"><img src="img/visf2_mag1.png" alt="illust"></div>
+            <div class="itm3 thumbnails"><img src="img/visf2_mag2.png" alt="illust"></div>
+            <div class="itm4 thumbnails"><img src="img/visf1_poster3.png" alt="illust"></div>
+        </div>
+    -->
+
+    <div id="footer">
+        <div id="social-icons">
+            <div class="social-icon"><img src="" alt="instagram-icon" id="insta"></div>
+            <div class="social-icon"><img src="" alt="mail-icon" id="mail"></div>
+        </div>
+    </div>
+</body> 
+</html>

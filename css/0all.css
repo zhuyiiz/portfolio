@@ -1,0 +1,95 @@
+:root {
+    --h1-size: 70px; /*title*/
+    --h2-size: 30px; /*subheadings on project thumbanails*/
+    --h4-size: 12px; /*info, skills, tools*/
+    --p-size: 14px; /*desc, body text*/
+    --a-size: 14px; /*links*/
+
+    --color-bg: #050623; /*141759*/
+    --color-bg-2: #040513;
+    --color-text: white;
+    --color-text-2: #B0C9EB;
+    --color-text-link: #728191;
+    --star-w: 20px;
+}
+
+*{
+    margin: 0;
+    line-height: 95%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+h1 {
+    font-family: "Chonburi", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: var(--h1-size);
+    color: var(--color-text);
+}
+h2 {
+    font-family: "Chonburi", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: var(--h2-size);
+    color: var(--color-text);
+}
+h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: var(--h4-size);
+    color: var(--color-text-2);
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: var(--p-size);
+    color: var(--color-text-2);
+}
+
+a {
+    text-decoration: none;
+    
+    font-family: "Montserrat", sans-serif;
+    font-weight: 0;
+    font-style: normal;
+    font-size: var(--a-size);
+    color: var(--color-text-link);
+}
+/*
+p {
+    font-family: "Courier Prime", monospace;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 12px;
+    color: #B0C9EB;
+}
+
+a {
+    text-decoration: none;
+    
+    font-family: "Chonburi", serif;
+    font-weight: 0;
+    font-style: normal;
+    font-size: 14px;
+    color: #728191;
+}*/
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 10vw;
+    }
+
+    h2 {
+        font-size: max(4.3vw, 22px);
+    }
+}

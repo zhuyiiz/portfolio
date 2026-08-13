@@ -1,0 +1,97 @@
+:root {
+    --letter-w: 45vw;
+    --letter-h: 30vw;
+    --letter-cover: 43vw;
+    --project-w: calc(var(--letter-w) * (6 / 7));
+    --project-h: calc(var(--letter-h) * (5 / 6));
+    --shadow-col: color-mix(in srgb, var(--color-bg-2) 50%, transparent)
+
+}
+
+#projects-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100dvw;
+    height: 100dvh;
+}
+#letter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    width: var(--letter-w);
+    height: var(--letter-h);
+}
+
+
+
+#letter-back {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid var(--color-text-link);
+    background-color: color-mix(in srgb, var(--color-text-link) 75%, var(--color-bg));
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px var(--shadow-col);
+}
+
+#letter-project {
+    display: block;
+    position: absolute;
+    bottom: 0vw;
+    transition: bottom ease-out;
+
+    width: var(--project-w);
+    height: var(--project-h);
+
+    border: 1px solid blue;
+    background-color: blue;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px var(--shadow-col);
+}
+
+#letter-front {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 75%;
+
+    border: 1px solid var(--color-text-link);
+    background-color: var(--color-text-2);
+    border-radius: 10px;
+    box-shadow: 0px -1px 5px 0px var(--shadow-col);
+}
+#letter-cover {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    transform-origin: top center;
+    transition: transform z-index box-shadow ease-out;
+
+    width: 100%;
+    height: 50%;
+
+    border: 1px solid var(--color-text-2);
+    background-color: var(--color-text-2);
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 0px var(--shadow-col);
+}
+/* #letter-cover {
+    position: absolute;
+    margin: auto;
+    margin-top: calc((var(--letter-cover) / -2) + 10px);
+    width: var(--letter-cover);
+    height: var(--letter-cover);
+    rotate: 45deg;
+    border-right: 1px solid var(--color-text);
+    border-bottom: 1px solid var(--color-text);
+    border-radius: 10px;
+    transition: transform 0.25s ease-out;
+    z-index: 1;
+} */
