@@ -18,6 +18,7 @@
 #heading-box {
     inset: 0;
     /*margin-bottom: 40vh;*/
+    margin-left: var(--star-w);
     
     display: flex;
     justify-content: center;
@@ -31,26 +32,35 @@
 
 .heading-desc {
     margin-top: 3dvh;
-    margin-bottom: 3dvh;
     text-align: center;
+    text-wrap: balance;
 }
 
 
 
 #heading-info {
+    margin-top: 3dvh;
+    
     display: flex;
     justify-content: center;
-    gap: 10dvw;
+    gap: 5dvw;
+    
+    width: 100%;
 }
 #heading-tools {
     display: flex;
     flex-direction: column;
     gap: 2px;
+
+    flex: 1 1 0; 
+    align-items: end;
 }
 #heading-skills {
     display: flex;
     flex-direction: column;
     gap: 2px;
+
+    flex: 1 1 0; 
 }
 .heading-tool {
     border: 1px solid var(--color-text-2);
@@ -70,8 +80,5 @@
 @media only screen and (max-width: 700px) {
     #img-box {
         padding: 15dvh 10vw;
-    }
-    #heading-star {
-        width: 2.9vw;
     }
 }

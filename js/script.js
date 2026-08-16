@@ -68,8 +68,8 @@ function leaveSubMenuDropdown(menulink) {
 }
 
 function hoverLetter() {
-    const cover = document.getElementById("letter-cover")
-    const project = document.getElementById("letter-project")
+    const cover = document.getElementById("letter-cover");
+    const project = document.getElementById("letter-project");
     
     cover.style.transitionDelay = "0s";
     cover.style.transitionDuration = "0.25s";
@@ -91,8 +91,8 @@ function hoverLetter() {
     //     }
 }
 function leaveLetter() {
-    const cover = document.getElementById("letter-cover")
-    const project = document.getElementById("letter-project")
+    const cover = document.getElementById("letter-cover");
+    const project = document.getElementById("letter-project");
     
     project.style.transitionDelay = "0s";
     project.style.transitionDuration = "0.25s";
