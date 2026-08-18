@@ -1,12 +1,10 @@
 .proj-box {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 5vw;
-    
-    padding: 10vw;
-    background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent);;
+    padding: 5vw 10vw;
+    background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent);
 }
 
 
@@ -14,39 +12,40 @@
 .proj-txt {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
+    flex: 2;
 }
 
 .proj-info {
     margin-top: 2dvh;
-
     display: flex;
-    justify-content: start;
-    gap: 5dvw;
-    
+    flex-direction: column;
+    gap: 5px;
     width: 100%;
 }
-.proj-tools {
+.proj-tools, .proj-skills {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
-
-    /* flex: 1 1 0;  */
+    gap: 5px;
 }
-.proj-skills {
+.proj-tools h3, .proj-skills h3 {
+    margin-top: 4px;
+}
+.proj-tools div, .proj-skills div {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
-
-    /* flex: 1 1 0;  */
+    flex-wrap: wrap;
+    gap: 5px;
 }
 .proj-desc {
-    margin-top: 1dvh;
+    margin-top: 2dvh;
 }
 
 
 
+.proj-imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 1dvh;
+    flex: 3;
+}
 .flex-col {
    display: flex;
    flex-direction: column;
@@ -116,6 +115,8 @@
 @media only screen and (max-width: 700px) {
     .proj-box {
         flex-direction: column;
+        align-items: start;
+        gap: 2dvh;
     }
     
     .proj-img-wrapper {
