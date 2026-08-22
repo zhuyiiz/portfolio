@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     gap: 5vw;
-    padding: 5vw 10vw;
+    padding: 10vw;
     background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent);
 }
 
@@ -49,13 +49,13 @@
 .flex-col {
    display: flex;
    flex-direction: column;
-   gap: 0.5vw;
+   gap: 10px;
    width: 100%;
 }
 .flex-row {
    display: flex;
    flex-direction: row;
-   gap: 1dvh;
+   gap: 10px;
    height: 100%;
 }
 
@@ -121,5 +121,19 @@
     
     .proj-img-wrapper {
         flex: 100%;
+    }
+
+    @media only screen and (max-height: 700px) {
+        .proj-box {
+            gap: 15px;
+        }
+    }
+}
+@media only screen and (max-height: 700px) {
+    .proj-info {
+        margin-top: 14px;
+    }
+    .proj-desc {
+        margin-top: 14px;
     }
 }

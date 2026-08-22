@@ -14,7 +14,7 @@ function insertConceptDesc(descName) {
 
 function insertMotionDesc(descName) {
     if (descName === "BeyondNova2026") {
-        var descText = 'somehting something animate character illust';
+        var descText = 'Beyond Nova trailer and character trailer for my passion project';
     } else if (descName === "OneManCircus2026") {
         var descText = 'kinetic text motion graphic video of Elio Mei\'s song "One Man Circus" done for class at NYU';
     } else if (descName === "MyTripToSydney2026") {
