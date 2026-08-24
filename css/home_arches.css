@@ -1,0 +1,94 @@
+:root {
+    --overlap-area-h: 125vw;
+    --arch-w: 15vw;
+    --arch-h: 80vw;
+    --arch-bg-col: color-mix(in srgb, var(--color-text-link) 50%, transparent);
+}
+
+#projects-box {
+    display: block;
+    padding-top: 25vh;
+}
+
+#arch-letter-overlap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    height: var(--overlap-area-h);
+}
+
+
+#arches-box {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+
+    position: absolute;
+    bottom: 0;
+
+}
+.arch {
+    background: linear-gradient(var(--arch-bg-col), transparent);
+    width: var(--arch-w);
+    height: var(--arch-h);
+    
+    border-start-end-radius: 75%;
+    border-start-start-radius: 75%;
+}
+
+@media (aspect-ratio < 1/1) {
+    :root {
+        --overlap-area-h: 225vw;
+        --arch-w: 30vw;
+        --arch-h: 160vw;
+    }
+}
+/* 
+#arches-box {
+    display: grid;
+    grid-template-columns: repeat(4, 10dvw);
+    grid-auto-rows: 10vw;
+    grid-gap: 2dvw;
+    
+    grid-template-areas:
+        "a . . ."
+        "a b . ."
+        "a b c ."
+        "a b c d"
+        "a b c d"
+        "a b c d"
+        ". b c d"
+        ". . c d"
+        ". . . d";
+
+    scroll-behavior: smooth;
+    scroll-margin: 100px;
+
+    position: absolute;
+    bottom: 0;
+
+}
+.a1 {
+    grid-area: a;
+}
+
+.a2 {
+    grid-area: b;
+}
+
+.a3 {
+    grid-area: c;
+}
+
+.a4 {
+    grid-area: d;
+}
+
+.arch {
+    background-color: grey;
+
+    border-start-end-radius: 75%;
+    border-start-start-radius: 75%;
+} */

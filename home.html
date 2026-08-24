@@ -13,6 +13,8 @@
 
 	<link rel="stylesheet" href="css/home_title.css">
 	<link rel="stylesheet" href="css/home_letter.css">
+	<link rel="stylesheet" href="css/home_arches.css">
+	<link rel="stylesheet" href="css/home_book.css">
 
 	<style>@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
 	<link href="https://fonts.cdnfonts.com/css/pecita" rel="stylesheet">
@@ -23,17 +25,7 @@
 	<div id="nav-entire">
 		<div id="logo-box">
 			<audio id="sound-star" src="sparkle.wav" autostart="false"></audio>
-			
 			<a href="home.html"><img src="img/logo.svg" alt="logo" class="logo-svg"></a>
-			<!-- 
-				<a href="home.html"><p class="logo-long logo-joey">joey</p></a>
-				<a href="home.html"><p class="logo-short logo-joey">j</p></a>
-			-->
-			<img src="img/STAR.png" alt="STAR" class="logo-star" onclick="starAudio();">
-			<!-- 
-				<a href="home.html"><p class="logo-long logo-cheung">cheung</p></a>
-				<a href="home.html"><p class="logo-short logo-cheung">c</p></a>
-			-->
 		</div>
 
 		<div class="menu-box">
@@ -94,16 +86,54 @@
 	</div>
 
     <div id="projects-box">
-        <div id="projects-list"></div>
-		
-		<div id="letter" onmouseenter="hoverLetter()" onmouseleave="leaveLetter()">
-			<div id="letter-back"></div>
-			<div id="letter-cover"></div>
-			<div id="letter-project"></div>
-			<div id="letter-front"></div>
+		<div id="arch-letter-overlap">
+			<div id="arches-box">
+				<div class="a1 arch"><img src="img/.png" alt="arch1"></div>
+				<div class="a2 arch"><img src="img/.png" alt="arch2"></div>
+				<div class="a3 arch"><img src="img/.png" alt="arch3"></div>
+				<div class="a4 arch"><img src="img/.png" alt="arch4"></div>
+			</div>
+			
+			<div id="letters-box">
+				<div id="letter1" class="letter" onmouseenter="hoverLetter(this)" onmouseleave="leaveLetter(this)">
+					<div class="letter-back"></div>
+					<div class="letter-cover"></div>
+					<div class="letter-project"><img src="img/.png" alt="letter-art-1"></div>
+					<div class="letter-front"></div>
+				</div>
+
+				<div id="letter2" class="letter" onmouseenter="hoverLetter(this)" onmouseleave="leaveLetter(this)">
+					<div class="letter-back"></div>
+					<div class="letter-cover"></div>
+					<div class="letter-project"><img src="img/.png" alt="letter-art-2"></div>
+					<div class="letter-front"></div>
+				</div>
+
+				<div id="letter3" class="letter" onmouseenter="hoverLetter(this)" onmouseleave="leaveLetter(this)">
+					<div class="letter-back"></div>
+					<div class="letter-cover"></div>
+					<div class="letter-project"><img src="img/.png" alt="letter-art-3"></div>
+					<div class="letter-front"></div>
+				</div>
+			</div>
 		</div>
 
-
+		<!-- <div id="projects-list"></div> -->
+		<div id="book-box">
+			<div id="book">
+				<div id="book-back"></div>
+				<div id="book-tabs">
+					<div class="book-tab"><h3>illust</h3></div>
+					<div class="book-tab"><h3>concept</h3></div>
+					<div class="book-tab"><h3>motion</h3></div>
+				</div>
+				<div id="book-pages">
+					<div id="book-page-left"></div>
+					<div id="book-page-right"></div>
+				</div>
+				
+			</div>
+		</div>
     </div>
 
     <div id="footer">

@@ -1,22 +1,27 @@
 :root {
-    --letter-w: 45vw;
-    --letter-h: 30vw;
-    --letter-cover: 43vw;
+    --area-h: 125vw;
+    --letter-pos: -5vw;
+    --letter-w: 37.5vw;
+    --letter-h: 25vw;
+    --letter-spacing: 15vw;
     --project-w: calc(var(--letter-w) * (6 / 7));
     --project-h: calc(var(--letter-h) * (5 / 6));
-    --shadow-col: color-mix(in srgb, var(--color-bg-2) 50%, transparent)
-
+    --shadow-col: color-mix(in srgb, var(--color-bg-2) 50%, transparent);
 }
 
-#projects-box {
+#letters-box {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;;
     align-items: center;
 
-    width: 100dvw;
-    height: 100dvh;
+    width: 100vw;
+    height: var(--area-h);
+    
+    position: absolute;
+    bottom: var(--letter-pos);
 }
-#letter {
+.letter {
     position: relative;
     display: flex;
     justify-content: center;
@@ -27,7 +32,7 @@
 
 
 
-#letter-back {
+.letter-back {
     position: absolute;
     top: 0;
 
@@ -40,7 +45,7 @@
     box-shadow: 0px 0px 5px 0px var(--shadow-col);
 }
 
-#letter-project {
+.letter-project {
     display: block;
     position: absolute;
     bottom: 0vw;
@@ -55,7 +60,7 @@
     box-shadow: 0px 0px 5px 0px var(--shadow-col);
 }
 
-#letter-front {
+.letter-front {
     position: absolute;
     bottom: 0;
 
@@ -67,7 +72,7 @@
     border-radius: 10px;
     box-shadow: 0px -1px 5px 0px var(--shadow-col);
 }
-#letter-cover {
+.letter-cover {
     position: absolute;
     top: 0;
     z-index: 1;
@@ -77,21 +82,27 @@
     width: 100%;
     height: 50%;
 
-    border: 1px solid var(--color-text-2);
-    background-color: var(--color-text-2);
+    border: 1px solid white;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0px 1px 5px 0px var(--shadow-col);
 }
-/* #letter-cover {
-    position: absolute;
-    margin: auto;
-    margin-top: calc((var(--letter-cover) / -2) + 10px);
-    width: var(--letter-cover);
-    height: var(--letter-cover);
-    rotate: 45deg;
-    border-right: 1px solid var(--color-text);
-    border-bottom: 1px solid var(--color-text);
-    border-radius: 10px;
-    transition: transform 0.25s ease-out;
-    z-index: 1;
-} */
+
+#letter1 {
+    rotate: 5deg;
+}
+#letter2 {
+    rotate: -5deg;
+}
+#letter3 {
+    rotate: 5deg;
+}
+
+@media (aspect-ratio < 1/1) {
+    :root {
+        --area-h: 225vw;
+        --letter-pos: -10vw;
+        --letter-w: 45vw;
+        --letter-h: 30vw;
+    }
+}

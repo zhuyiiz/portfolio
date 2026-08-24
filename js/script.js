@@ -67,9 +67,9 @@ function leaveSubMenuDropdown(menulink) {
     // }
 }
 
-function hoverLetter() {
-    const cover = document.getElementById("letter-cover");
-    const project = document.getElementById("letter-project");
+function hoverLetter(letterDiv) {
+    const cover = letterDiv.querySelector(".letter-cover");
+    const project = letterDiv.querySelector(".letter-project");
     
     cover.style.transitionDelay = "0s";
     cover.style.transitionDuration = "0.25s";
@@ -90,9 +90,9 @@ function hoverLetter() {
     //         cover.style.transform = "scaleY(1)";
     //     }
 }
-function leaveLetter() {
-    const cover = document.getElementById("letter-cover");
-    const project = document.getElementById("letter-project");
+function leaveLetter(letterDiv) {
+    const cover = letterDiv.querySelector(".letter-cover");
+    const project = letterDiv.querySelector(".letter-project");
     
     project.style.transitionDelay = "0s";
     project.style.transitionDuration = "0.25s";

@@ -17,7 +17,6 @@
 
 #heading-box {
     inset: 0;
-    /*margin-bottom: 40vh;*/
     margin-left: var(--star-w);
     
     display: flex;
@@ -31,7 +30,7 @@
 
 
 .heading-desc {
-    margin-top: 3dvh;
+    margin-top: 3vh;
     text-align: center;
     text-wrap: balance;
 }
@@ -39,11 +38,11 @@
 
 
 #heading-info {
-    margin-top: 3dvh;
+    margin-top: 3vh;
     
     display: flex;
     justify-content: center;
-    gap: 3dvh;
+    gap: 3vh;
     
     width: 100%;
 }

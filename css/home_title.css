@@ -11,9 +11,7 @@
 #title-box {
     position: relative;
     margin: auto;
-    /*margin-top: 35dvh;*/
     inset: 0;
-    /*margin-bottom: 40vh;*/
     width: fit-content;
 }
 
@@ -41,6 +39,7 @@
 }
 
 #slogan {
+    margin: auto;
     margin-top: 20%;
     margin-bottom: 20%;
     text-align: center;
@@ -105,7 +104,8 @@
     }
     
     #slogan {
-        font-size: 2vw;
+        width: 40vw;
+        text-wrap: balance;
     }
 
     #arrow {
