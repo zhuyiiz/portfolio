@@ -5,6 +5,7 @@
     --pages-h: calc(var(--book-h) - 2vw);
     --tab-w: 8vw;
     --tab-h: 4vw;
+    --tab-pos-x: calc(var(--book-w) * 0.5 - 2vw);
     --shadow-col: color-mix(in srgb, var(--color-bg-2) 50%, transparent);
     --book-corner: 2px;
 }
@@ -18,29 +19,6 @@
     margin-bottom: 25vw;
 }
 
-
-
-/* #book-arrows {
-    display: flex;
-} */
-#book-arrow-prev, #book-arrow-next {
-    visibility: visible;
-    margin: 15px;
-    width: 45px;
-    height: 45px;
-    border-left: solid var(--color-text-2);
-    border-bottom: solid var(--color-text-2);
-}
-#book-arrow-prev {rotate: 45deg;}
-#book-arrow-next {rotate: 225deg;}
-#book-arrow-prev:hover, #book-arrow-next:hover {
-    border-left-color: var(--color-text);
-    border-bottom-color: var(--color-text);
-    cursor: pointer;
-}
-
-
-
 #book {
     position: relative;
     display: flex;
@@ -50,8 +28,6 @@
     width: var(--book-w);
     height: var(--book-h);
 }
-
-
 
 #book-back {
     position: absolute;
@@ -68,46 +44,25 @@
 
 
 
-#book-tabs {
-    position: absolute;
-    display: flex;
-    top: -2.5vw;
-    left: 2vw;
-    /* z-index: 0; */
-}
-#book-tabs-reverse {
-    position: absolute;
-    display: flex;
-    top: -2.5vw;
-    flex-direction: row-reverse;
-    right: 2vw;
-    z-index: 0;
-}
-#book-tabs-reverse .book-tab {
-    border-color: color-mix(in srgb, var(--color-text-link) 25%, var(--color-bg));
-    background-color: color-mix(in srgb, var(--color-text-link) 25%, var(--color-bg));
-    box-shadow: -1px 1px 5px 0px var(--shadow-col);
-}
-.book-tab {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    width: var(--tab-w);
-    height: var(--tab-h);
 
-    border: 1px solid var(--color-text-link);
-    background-color: var(--color-text-link);
-    border-radius: var(--book-corner);
-    box-shadow: -1px 1px 5px 0px var(--shadow-col);
+#book-arrow-prev, #book-arrow-next {
+    visibility: visible;
+    margin: 15px;
+    width: 15px;
+    height: 15px;
+    border-left: solid var(--color-text-2);
+    border-bottom: solid var(--color-text-2);
 }
-#tab1{visibility: visible; z-index: 1;}
-#tab2{visibility: visible; z-index: 2;}
-#tab3{visibility: hidden; z-index: 3;}
-#tabr1{visibility: hidden; z-index: 3;}
-#tabr2{visibility: hidden; z-index: 2;}
-#tabr3{visibility: visible; z-index: 1;}
+#book-arrow-prev {rotate: 45deg;}
+#book-arrow-next {rotate: 225deg;}
+#book-arrow-prev:hover, #book-arrow-next:hover {
+    border-left-color: var(--color-text);
+    border-bottom-color: var(--color-text);
+    cursor: pointer;
+}
+
+
 
 
 
@@ -143,13 +98,12 @@
     transform-origin: left;
     transition: transform 0.5s;
 }
-.page-front{
-    z-index: 1;
-    backface-visibility: hidden;
-}
-.page-back{
-    z-index: 0;
-}
+.page-front{z-index: 0;}
+.page-back{z-index: 1; backface-visibility: hidden;}
+
+
+
+
 
 .page-front-content, .page-back-content {
     display: flex;
@@ -158,18 +112,69 @@
     width: 100%;
     height: 100%;
 }
-.page-back-content {
+.page-front-content {
     transform: rotateY(180deg);
 }
 
 .flipped .page-front,
 .flipped .page-back {
-    transform: rotateY(-180deg)
+    transform: rotateY(-180deg);
 }
 
 .no-transition {
   transition: none !important;
 }
+
+
+
+
+
+.tab-front, .tab-back {
+    position: absolute;
+    top: -3vw;
+    left: 2vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--tab-w);
+    height: var(--tab-h);
+
+    border: 1px solid;
+    border-radius: var(--book-corner);
+    box-shadow: -1px -1px 2px 0px var(--shadow-col);
+
+    cursor: pointer;
+}
+.tab-front {
+    border-color: var(--color-text-link);
+    background-color: var(--color-text-link);
+}
+.tab-back {
+    backface-visibility: hidden;
+    border-color: color-mix(in srgb, var(--color-text-link) 25%, var(--color-bg));
+    background-color: color-mix(in srgb, var(--color-text-link) 25%, var(--color-bg));
+    transform: rotateY(180deg);
+    backface-visibility: visible;
+}
+
+#tabf2, #tabb2{left: calc(2vw + var(--tab-w));}
+#tabf3, #tabb3{left: calc(2vw + var(--tab-w) + var(--tab-w));}
+
+.flipped .tab-back, 
+.tab-front {
+    z-index: 0; 
+    transition: z-index 0.5s;
+}
+.flipped .tab-front, 
+.tab-back {
+    z-index: 1; 
+    transition: z-index 0.5s;
+}
+
+
+
 
 
 @media (aspect-ratio < 1/1) {
@@ -185,12 +190,9 @@
         margin-top: 50vw;
         margin-bottom: 50vw;
     }
-    #book-tabs-reverse {
-        flex-direction: row;
-        top: auto;
-        bottom: -2.5vw;
-        left: 2vw;
-    }
+    
+
+
     .book-page {
         flex-direction: column;
     }
@@ -202,11 +204,15 @@
         
         transform-origin: top;
     }
-
-    .page-back-content {
+    .page-front-content {
         transform: rotateX(180deg);
     }
 
+
+
+    .tab-back{
+        transform: rotateX(180deg);
+    }
     .flipped .page-front,
     .flipped .page-back {
         transform: rotateX(180deg)

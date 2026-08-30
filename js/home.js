@@ -29,18 +29,18 @@ function turnPageNext() {
     if (currentPage < lastPage) {
         switch (currentPage) {
             case 1:
-                paper1.style.zIndex = 1;
                 paper1.classList.add("flipped");
+                paper1.style.zIndex = 3;
+                paper2.style.zIndex = 2;
                 bookArrowPrev.style.visibility = "visible";
                 bookArrowPrev.style.cursor = "pointer";
-                switchCurrTab("concept");
                 break;
             case 2:
-                paper2.style.zIndex = 2;
+                paper2.style.zIndex = 3;
+                paper1.style.zIndex = 2;
                 paper2.classList.add("flipped");
                 bookArrowNext.style.visibility = "hidden";
                 bookArrowNext.style.cursor = "default";
-                switchCurrTab("motion");
                 break;
             default:
                 throw new Error("unknown state")
@@ -58,17 +58,17 @@ function turnPagePrev() {
         switch (currentPage) {
             case 2:
                 paper1.classList.remove("flipped");
-                paper1.style.zIndex = 3;
+                paper1.style.zIndex = 2;
+                paper2.style.zIndex = 1;
                 bookArrowPrev.style.visibility = "hidden";
                 bookArrowPrev.style.cursor = "default";
-                switchCurrTab("illust");
                 break;
             case 3:
                 paper2.classList.remove("flipped");
-                paper2.style.zIndex = 2;
+                paper1.style.zIndex = 2;
+                paper2.style.zIndex = 3;
                 bookArrowNext.style.visibility = "visible";
                 bookArrowNext.style.cursor = "pointer";
-                switchCurrTab("concept");
                 break;
             default:
                 throw new Error("unknown state")
@@ -77,43 +77,32 @@ function turnPagePrev() {
     }
 }
 
-
-
-function switchCurrTab(tabName) {
-    const illustTab = document.getElementById("tab1");
-    const conceptTab = document.getElementById("tab2");
-    const motionTab = document.getElementById("tab3");
-    const illustTabReversed = document.getElementById("tabr1");
-    const conceptTabReversed = document.getElementById("tabr2");
-    const motionTabReversed = document.getElementById("tabr3");
-
-    switch (tabName) {
+function turnPageSection(sectionName) {
+    let pageNum;
+    switch (sectionName) {
         case "illust":
-            console.log("u r on illust tab");
-            illustTab.style.visibility = "visible";
-            conceptTab.style.visibility = "hidden";
-            motionTab.style.visibility = "hidden";
-            illustTabReversed.style.visibility = "hidden";
-            conceptTabReversed.style.visibility = "visible";
-            motionTabReversed.style.visibility = "visible";
+            pageNum = 0;
+            for (let turn = currentPage; turn >= pageNum; turn--) {
+                turnPagePrev();
+            }
             break;
         case "concept":
-            console.log("u r on concept tab");
-            illustTab.style.visibility = "visible";
-            conceptTab.style.visibility = "visible";
-            motionTab.style.visibility = "hidden";
-            illustTabReversed.style.visibility = "hidden";
-            conceptTabReversed.style.visibility = "hidden";
-            motionTabReversed.style.visibility = "visible";
+            pageNum = 1;
+            if (pageNum < currentPage) {
+                for (let turn = currentPage; turn > pageNum +1; turn--) {
+                    turnPagePrev();
+                }
+            } else {
+                for (let turn = currentPage; turn <= pageNum; turn++) {
+                    turnPageNext();
+                }
+            }
             break;
         case "motion":
-            console.log("u r on motion tab");
-            illustTab.style.visibility = "visible";
-            conceptTab.style.visibility = "visible";
-            motionTab.style.visibility = "visible";
-            illustTabReversed.style.visibility = "hidden";
-            conceptTabReversed.style.visibility = "hidden";
-            motionTabReversed.style.visibility = "hidden";
+            pageNum = 2;
+            for (let turn = currentPage; turn <= pageNum; turn++) {
+                turnPageNext();
+            }
             break;
         default:
             throw new Error("unknown state")
