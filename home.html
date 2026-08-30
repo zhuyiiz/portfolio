@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<script src="js/script.js"></script>
+	<script src="js/home.js"></script>
 
 	<link rel="stylesheet" href="css/0all.css">
 	<link rel="stylesheet" href="css/0all_logo.css">
@@ -40,7 +41,7 @@
 					<li><a class="menu-links" href="illust.html">illustration</a></li>
 					
 					<div class="submenu-dropdown" onclick="clickSubMenuDropdown(this)"onmouseenter="hoverSubMenuDropdown(this)" onmouseleave="leaveSubMenuDropdown(this)">
-						<li><a class="menu-links" href="concept.html">concept</a></li>
+						<li><a class="menu-links" href="concept.html">concept</a> <div class="nav-arrow"></div></li>
 						<ul class="submenu-ul">
 							<li><a class="menu-links" href="concept_2026beyondnova.html">beyond nova [2026]</a></li>
 							<li><a class="menu-links" href="concept_2025janitorsmystery.html">janitor's mystery [2025]</a></li>
@@ -48,8 +49,9 @@
 							<li><a class="menu-links" href="concept_2024constantoutput.html">constant output [2024]</a></li>
 						</ul>
 					</div>
+
 					<div class="submenu-dropdown" onclick="clickSubMenuDropdown(this)"onmouseenter="hoverSubMenuDropdown(this)" onmouseleave="leaveSubMenuDropdown(this)">
-						<li><a class="menu-links" href="motion.html">motion</a></li>
+						<li><a class="menu-links" href="motion.html">motion</a> <div class="nav-arrow"></div></li>
 						<ul class="submenu-ul">
 							<li><a class="menu-links" href="motion_2026beyondnova.html">beyond nova [2026]</a></li>
 							<li><a class="menu-links" href="motion_2026onemancircus.html">one man circus [2026]</a></li>
@@ -71,7 +73,7 @@
 			<h1 id="cheung">cheung</h1>
 			<img src="img/STAR.png" alt="STAR" id="title-star" onclick="starAudio();">
 			<p id="slogan">dream beyond the stars.</p>
-			<a href="#projects-box"><div id="arrow"></div></a>
+			<a href="#projects-box"><div id="title-arrow"></div></a>
 
 			<div id="constellation">
 				<img src="img/STAR.png" alt="STAR" id="star1" onclick="starAudio();">
@@ -86,7 +88,7 @@
 	</div>
 
     <div id="projects-box">
-		<div id="arch-letter-overlap">
+		<!-- <div id="arch-letter-overlap">
 			<div id="arches-box">
 				<div class="a1 arch"><img src="img/.png" alt="arch1"></div>
 				<div class="a2 arch"><img src="img/.png" alt="arch2"></div>
@@ -116,23 +118,65 @@
 					<div class="letter-front"></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- <div id="projects-list"></div> -->
 		<div id="book-box">
+			<div id="book-arrow-prev" onclick="turnPagePrev();"></div>
 			<div id="book">
 				<div id="book-back"></div>
 				<div id="book-tabs">
-					<div class="book-tab"><h3>illust</h3></div>
-					<div class="book-tab"><h3>concept</h3></div>
-					<div class="book-tab"><h3>motion</h3></div>
+					<div id="tab1" class="book-tab"><h3>illust</h3></div>
+					<div id="tab2" class="book-tab"><h3>concept</h3></div>
+					<div id="tab3" class="book-tab"><h3>motion</h3></div>
 				</div>
-				<div id="book-pages">
-					<div id="book-page-left"></div>
-					<div id="book-page-right"></div>
+				<div id="book-tabs-reverse">
+					<div id="tabr1" class="book-tab"><h3>illust</h3></div>
+					<div id="tabr2" class="book-tab"><h3>concept</h3></div>
+					<div id="tabr3" class="book-tab"><h3>motion</h3></div>
+				</div>
+
+				<div id="p0" class="book-page flipped">
+					<div class="page-back">
+						<div id="prev-b" class="page-back-content">
+							<h2>prevb</h2>
+						</div>
+					</div>
+				</div>
+				<div id="p1" class="book-page flipped">
+					<div class="page-front">
+						<div id="prev-f" class="page-front-content">
+							<h2>prevf</h2>
+						</div>
+					</div>
+					<div class="page-back">
+						<div id="curr-b" class="page-back-content">
+							<h2>currb</h2>
+						</div>
+					</div>
+				</div>
+				<div id="p2" class="book-page">
+					<div class="page-front">
+						<div id="curr-f" class="page-front-content">
+							<h2>currf</h2>
+						</div>
+					</div>
+					<div class="page-back">
+						<div id="next-b" class="page-back-content">
+							<h2>nextb</h2>
+						</div>
+					</div>
+				</div>
+				<div id="p3" class="book-page">
+					<div class="page-front">
+						<div id="nextf" class="page-front-content">
+							<h2>nextf</h2>
+						</div>
+					</div>
 				</div>
 				
 			</div>
+			<div id="book-arrow-next" onclick="turnPageNext();"></div>
 		</div>
     </div>
 

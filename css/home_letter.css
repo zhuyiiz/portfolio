@@ -4,9 +4,10 @@
     --letter-w: 37.5vw;
     --letter-h: 25vw;
     --letter-spacing: 15vw;
-    --project-w: calc(var(--letter-w) * (6 / 7));
-    --project-h: calc(var(--letter-h) * (5 / 6));
+    --project-w: calc(var(--letter-w) * (24 / 25));
+    --project-h: calc(var(--letter-h) * (23 / 25));
     --shadow-col: color-mix(in srgb, var(--color-bg-2) 50%, transparent);
+    --letter-corner: 1px;
 }
 
 #letters-box {
@@ -30,6 +31,17 @@
     height: var(--letter-h);
 }
 
+@keyframes hoveringLetters {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 
 .letter-back {
@@ -41,7 +53,7 @@
 
     border: 1px solid var(--color-text-link);
     background-color: color-mix(in srgb, var(--color-text-link) 75%, var(--color-bg));
-    border-radius: 10px;
+    border-radius: var(--letter-corner);
     box-shadow: 0px 0px 5px 0px var(--shadow-col);
 }
 
@@ -56,7 +68,7 @@
 
     border: 1px solid blue;
     background-color: blue;
-    border-radius: 10px;
+    border-radius: var(--letter-corner);
     box-shadow: 0px 0px 5px 0px var(--shadow-col);
 }
 
@@ -69,7 +81,7 @@
 
     border: 1px solid var(--color-text-link);
     background-color: var(--color-text-2);
-    border-radius: 10px;
+    border-radius: var(--letter-corner);
     box-shadow: 0px -1px 5px 0px var(--shadow-col);
 }
 .letter-cover {
@@ -84,18 +96,21 @@
 
     border: 1px solid white;
     background-color: white;
-    border-radius: 10px;
+    border-radius: var(--letter-corner) var(--letter-corner) 50% 50%;
     box-shadow: 0px 1px 5px 0px var(--shadow-col);
 }
 
 #letter1 {
     rotate: 5deg;
+    animation: hoveringLetters 2s ease-in-out infinite;
 }
 #letter2 {
     rotate: -5deg;
+    animation: hoveringLetters 1.75s ease-in-out infinite;
 }
 #letter3 {
     rotate: 5deg;
+    animation: hoveringLetters 2s ease-in-out infinite;
 }
 
 @media (aspect-ratio < 1/1) {

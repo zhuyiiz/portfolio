@@ -6,6 +6,7 @@
     --tab-w: 8vw;
     --tab-h: 4vw;
     --shadow-col: color-mix(in srgb, var(--color-bg-2) 50%, transparent);
+    --book-corner: 2px;
 }
 
 #book-box {
@@ -16,6 +17,30 @@
     margin-top: 25vw;
     margin-bottom: 25vw;
 }
+
+
+
+/* #book-arrows {
+    display: flex;
+} */
+#book-arrow-prev, #book-arrow-next {
+    visibility: visible;
+    margin: 15px;
+    width: 45px;
+    height: 45px;
+    border-left: solid var(--color-text-2);
+    border-bottom: solid var(--color-text-2);
+}
+#book-arrow-prev {rotate: 45deg;}
+#book-arrow-next {rotate: 225deg;}
+#book-arrow-prev:hover, #book-arrow-next:hover {
+    border-left-color: var(--color-text);
+    border-bottom-color: var(--color-text);
+    cursor: pointer;
+}
+
+
+
 #book {
     position: relative;
     display: flex;
@@ -37,15 +62,31 @@
 
     border: 1px solid var(--color-text-link);
     background-color: color-mix(in srgb, var(--color-text-link) 75%, var(--color-bg));
-    border-radius: 5px;
+    border-radius: var(--book-corner);
     box-shadow: 0px 0px 5px 0px var(--shadow-col);
 }
+
+
 
 #book-tabs {
     position: absolute;
     display: flex;
     top: -2.5vw;
     left: 2vw;
+    /* z-index: 0; */
+}
+#book-tabs-reverse {
+    position: absolute;
+    display: flex;
+    top: -2.5vw;
+    flex-direction: row-reverse;
+    right: 2vw;
+    z-index: 0;
+}
+#book-tabs-reverse .book-tab {
+    border-color: color-mix(in srgb, var(--color-text-link) 25%, var(--color-bg));
+    background-color: color-mix(in srgb, var(--color-text-link) 25%, var(--color-bg));
+    box-shadow: -1px 1px 5px 0px var(--shadow-col);
 }
 .book-tab {
     position: relative;
@@ -58,33 +99,78 @@
 
     border: 1px solid var(--color-text-link);
     background-color: var(--color-text-link);
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px var(--shadow-col);
+    border-radius: var(--book-corner);
+    box-shadow: -1px 1px 5px 0px var(--shadow-col);
 }
+#tab1{visibility: visible; z-index: 1;}
+#tab2{visibility: visible; z-index: 2;}
+#tab3{visibility: hidden; z-index: 3;}
+#tabr1{visibility: hidden; z-index: 3;}
+#tabr2{visibility: hidden; z-index: 2;}
+#tabr3{visibility: visible; z-index: 1;}
 
-#book-pages {
+
+
+.book-page {
     position: absolute;
     display: flex;
     
     width: var(--pages-w);
     height: var(--pages-h);
 
-    border: 1px solid blue;
-    background-color: blue;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px var(--shadow-col);
-}
-#book-page-left, #book-page-right {
-    position: relative;
+    /* border: 1px solid blue; */
+    border-radius: var(--book-corner);
+    /* box-shadow: 0px 0px 5px 0px var(--shadow-col); */
 
+    perspective: 1500px;
+}
+#p0{box-shadow: 0px 0px 5px 0px var(--shadow-col);}
+#p1{z-index: 1;}
+#p2{z-index: 2;}
+
+.page-front, .page-back {
+    position: absolute;
+    top: 0;
+    left: 50%;
     width: 50%;
     height: 100%;
 
     border: 1px solid var(--color-text-link);
     background-color: var(--color-text-2);
-    border-radius: 5px;
-    box-shadow: 0px -1px 5px 0px var(--shadow-col);
+    /* border-radius: var(--book-corner);
+    box-shadow: 0px 0px 5px 0px var(--shadow-col); */
+
+    transform-origin: left;
+    transition: transform 0.5s;
 }
+.page-front{
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.page-back{
+    z-index: 0;
+}
+
+.page-front-content, .page-back-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.page-back-content {
+    transform: rotateY(180deg);
+}
+
+.flipped .page-front,
+.flipped .page-back {
+    transform: rotateY(-180deg)
+}
+
+.no-transition {
+  transition: none !important;
+}
+
 
 @media (aspect-ratio < 1/1) {
     :root {
@@ -99,15 +185,30 @@
         margin-top: 50vw;
         margin-bottom: 50vw;
     }
-    #book-tabs {
-        top: -2.5vw;
+    #book-tabs-reverse {
+        flex-direction: row;
+        top: auto;
+        bottom: -2.5vw;
         left: 2vw;
     }
-    #book-pages {
+    .book-page {
         flex-direction: column;
     }
-    #book-page-left, #book-page-right {
+    .page-front, .page-back {
+        top: 50%;
+        left: 0;
         width: 100%;
         height: 50%;
+        
+        transform-origin: top;
+    }
+
+    .page-back-content {
+        transform: rotateX(180deg);
+    }
+
+    .flipped .page-front,
+    .flipped .page-back {
+        transform: rotateX(180deg)
     }
 }

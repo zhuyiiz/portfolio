@@ -45,6 +45,20 @@
     border-radius: 5px;
 }
 
+.submenu-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-arrow {
+    margin-top: -5px;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid var(--color-text-link);
+    border-bottom: 1px solid var(--color-text-link);
+    rotate: -45deg;
+}
+
 
 
 .menu-links {
@@ -76,6 +90,7 @@
 
 .current-page {
     color: var(--color-text-2);
+    border-color: var(--color-text-2);
 }
 
 

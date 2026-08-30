@@ -51,7 +51,7 @@ h3 {
 }
 h4 {
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     font-size: var(--h4-size);
     color: var(--color-text-2);
@@ -59,7 +59,7 @@ h4 {
 
 p {
     font-family: "Montserrat", sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     font-style: normal;
     font-size: var(--p-size);
     color: var(--color-text-2);

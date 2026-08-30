@@ -27,12 +27,14 @@
 
     position: absolute;
     bottom: 0;
-
+    width: 100vw;
+    overflow: hidden;
 }
 .arch {
     background: linear-gradient(var(--arch-bg-col), transparent);
     width: var(--arch-w);
     height: var(--arch-h);
+    flex: 0 0 auto;
     
     border-start-end-radius: 75%;
     border-start-start-radius: 75%;
