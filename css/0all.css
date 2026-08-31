@@ -11,6 +11,7 @@
     --color-text: white;
     --color-text-2: #B0C9EB;
     --color-text-link: #728191;
+    --color-text-link-2: var(--color-text-2);
     --star-w: 20px;
     --star-w-responsive: 2.9vw;
 }
@@ -72,26 +73,8 @@ a {
     font-weight: 0;
     font-style: normal;
     font-size: var(--a-size);
-    color: var(--color-text-link);
+    color: var(--color-text-link-2);
 }
-/*
-p {
-    font-family: "Courier Prime", monospace;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 12px;
-    color: #B0C9EB;
-}
-
-a {
-    text-decoration: none;
-    
-    font-family: "Chonburi", serif;
-    font-weight: 0;
-    font-style: normal;
-    font-size: 14px;
-    color: #728191;
-}*/
 
 @media only screen and (max-width: 700px) {
     :root {

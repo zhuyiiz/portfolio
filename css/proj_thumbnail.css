@@ -4,7 +4,7 @@
     align-items: center;
     gap: 5vw;
     padding: 10vw;
-    background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent);
+    /* background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent); */
 }
 
 
@@ -13,6 +13,9 @@
     display: flex;
     flex-direction: column;
     flex: 2;
+}
+.proj-head {
+    text-transform: lowercase;
 }
 
 .proj-info {
