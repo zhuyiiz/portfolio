@@ -57,6 +57,7 @@
     border-left: 1px solid var(--color-text-link-2);
     border-bottom: 1px solid var(--color-text-link-2);
     rotate: -45deg;
+    transition: rotate 0.3s;
 }
 
 

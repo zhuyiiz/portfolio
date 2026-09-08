@@ -10,17 +10,13 @@
 
 #title-box {
     position: relative;
-    margin: auto;
-    inset: 0;
     width: fit-content;
 }
 
 #hi {
     margin-left: -18%;
-    font-family: "Chonburi", serif;
-    /*font-family: "Montserrat", sans-serif;
-    font-weight: 700;*/
-    font-size: 14px;
+    /* font-family: "Chonburi", serif; */
+    font-weight: 700;
 }
 
 #joey {

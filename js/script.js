@@ -40,29 +40,40 @@ function clickMenuDropdown() {
 
 function clickSubMenuDropdown(menulink) {
     const submenu = menulink.querySelector(".submenu-ul");
+    const arrow = menulink.querySelector(".nav-arrow");
     let divWidth = window.innerWidth;
     
     if (divWidth<=700) {
         if (submenu.style.display === "none") {
             submenu.style.display = "flex";
+            arrow.style.rotate = "-225deg";
+            arrow.style.marginTop = "5px";
         } else {
             submenu.style.display = "none";
+            arrow.style.rotate = "-45deg";
+            arrow.style.marginTop = "-5px";
         }
     }
 }
 function hoverSubMenuDropdown(menulink) {
     const submenu = menulink.querySelector(".submenu-ul");
+    const arrow = menulink.querySelector(".nav-arrow");
     let divWidth = window.innerWidth;
     
     if (divWidth>700) {
         submenu.style.display = "flex";
+        arrow.style.rotate = "-225deg";
+        arrow.style.marginTop = "5px";
     }
 }
 function leaveSubMenuDropdown(menulink) {
     const submenu = menulink.querySelector(".submenu-ul");
+    const arrow = menulink.querySelector(".nav-arrow");
     let divWidth = window.innerWidth;
     
     if (divWidth>700) {
         submenu.style.display = "none";
+        arrow.style.rotate = "-45deg";
+        arrow.style.marginTop = "-5px";
     }
 }
