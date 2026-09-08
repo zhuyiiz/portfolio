@@ -1,0 +1,31 @@
+#title-box {
+    position: relative;
+    width: fit-content;
+}
+
+#hi {
+    margin-left: 20%;
+    margin-bottom: -5%;
+    /* font-family: "Chonburi", serif; */
+    font-weight: 700;
+}
+
+#joey {
+    margin-left: 0%;
+    margin-bottom: -25px;
+}
+
+#title-star {
+    width: var(--star-w);
+    margin-left: 100%;
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+    #joey {
+        margin-bottom: -3.5vw;
+    }
+}

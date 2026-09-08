@@ -1,0 +1,100 @@
+:root {
+    --arch-w: 15vw;
+    --arch-h: 50vw;
+    --arch-bg-col: color-mix(in srgb, var(--color-text-link) 50%, transparent);
+    --div-spacing: 5vh;
+}
+#about-cover-box {
+    margin: auto;
+    padding: 20vh 0 10vh 0;
+    width: 100dvw;
+    /* height: 100dvh; */
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: end;
+    gap: var(--div-spacing);
+
+    background: linear-gradient(var(--arch-bg-col), transparent);
+}
+
+
+
+#portrait-box {
+    justify-items: start;
+}
+.arch {
+    background: var(--arch-bg-col);
+    aspect-ratio: 15 / 50;
+    width: auto;
+    height: min(500px, var(--arch-h));
+    flex: 0 0 auto;
+    
+    border-start-end-radius: 75%;
+    border-start-start-radius: 75%;
+}
+
+
+
+#title-desc-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: var(--div-spacing);
+    
+    width: min(300px, 100%);
+}
+/* title css in file: about_title.css */
+#desc-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--div-spacing);
+}
+#desc-box p {
+    text-wrap: wrap;
+}
+#desc-box div {
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+#more-desc-box {
+    margin: auto;
+    padding-bottom: 15vh;
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--div-spacing);
+}
+#desc-box div, #more-desc-box div {
+    display: flex;
+    flex-direction: column;
+}
+#desc-box h3, #more-desc-box h3 {
+    margin-bottom: 5px;
+}
+#more-desc-box div {
+    gap: 15px;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    #about-cover-box {
+        padding: 15vh 20vw 5vh 20vw;
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+    .arch {
+        width: 25vw;
+        height: auto;
+    }
+    #more-desc-box {
+        padding: 0 20vw 15vh 20vw;
+    }
+}
