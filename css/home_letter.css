@@ -52,7 +52,7 @@
     height: 100%;
 
     border: 1px solid var(--color-text-link);
-    background-color: color-mix(in srgb, var(--color-text-link) 75%, var(--color-bg));
+    background-color: color-mix(in srgb, var(--color-text-2) 75%, var(--color-bg));
     border-radius: var(--letter-corner);
     box-shadow: 0px 0px 5px 0px var(--shadow-col);
 }
@@ -63,13 +63,18 @@
     bottom: 0vw;
     transition: bottom ease-out;
 
-    width: var(--project-w);
-    height: var(--project-h);
+    max-width: var(--project-w);
+    max-height: var(--project-h);
+    overflow: hidden;
 
-    border: 1px solid blue;
-    background-color: blue;
     border-radius: var(--letter-corner);
     box-shadow: 0px 0px 5px 0px var(--shadow-col);
+}
+.letter-project img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .letter-front {
@@ -80,7 +85,7 @@
     height: 75%;
 
     border: 1px solid var(--color-text-link);
-    background-color: var(--color-text-2);
+    background-color: color-mix(in srgb, var(--color-text-2) 75%, var(--color-text));
     border-radius: var(--letter-corner);
     box-shadow: 0px -1px 5px 0px var(--shadow-col);
 }
@@ -95,7 +100,7 @@
     height: 50%;
 
     border: 1px solid white;
-    background-color: white;
+    background-color: color-mix(in srgb, var(--color-text-2) 25%, var(--color-text));;
     border-radius: var(--letter-corner) var(--letter-corner) 50% 50%;
     box-shadow: 0px 1px 5px 0px var(--shadow-col);
 }

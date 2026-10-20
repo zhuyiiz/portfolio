@@ -2,10 +2,26 @@
     margin: auto;
     width: 100dvw;
     height: 100dvh;
-    background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent); */
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+#cover-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+  background-image: url(../img/illust/1IcyGlass.png);
+  background-size: cover;
+  background-position: right;
+  
+  opacity: 0.5;
+  z-index: -1;
+  
 }
 
 #title-box {

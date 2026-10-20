@@ -43,6 +43,12 @@
 }
 
 
+#book h2 { /*temporary*/
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding: 5vw;
+}
 
 
 

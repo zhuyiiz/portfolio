@@ -2,7 +2,25 @@
     /* background-color: var(--color-bg-2); */
     background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent);
 
+    padding: 30px;
     width: 100vw;
     min-height: 25vh;
     flex: 1;
+}
+
+#social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icon {
+    height: 30px;
+    width: auto;
+}
+.social-icon img {
+    display: block;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    color: white;
+    filter: brightness(0) invert(60%) sepia(90%)  hue-rotate(180deg);
 }
