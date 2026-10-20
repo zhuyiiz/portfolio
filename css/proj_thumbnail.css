@@ -111,7 +111,7 @@
 }
 .img-placeholder{
     background-color: var(--color-text-link);
-    width: 100px;
+    width: 100%;
     aspect-ratio: 5 / 3;
     /* filter: brightness(0) invert(60%) sepia(90%)  hue-rotate(180deg); */
 }

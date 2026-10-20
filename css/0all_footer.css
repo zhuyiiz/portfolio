@@ -3,5 +3,6 @@
     background-color: color-mix(in srgb, var(--color-text-link) 50%, transparent);
 
     width: 100vw;
-    height: 25vh;
+    min-height: 25vh;
+    flex: 1;
 }
