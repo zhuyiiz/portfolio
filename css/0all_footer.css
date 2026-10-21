@@ -10,17 +10,21 @@
 
 #social-icons {
     display: flex;
+    justify-self: right;
     gap: 10px;
 }
 .social-icon {
     height: 30px;
-    width: auto;
 }
 .social-icon img {
     display: block;
     height: 100%;
-    width: auto;
     object-fit: contain;
     color: white;
     filter: brightness(0) invert(60%) sepia(90%)  hue-rotate(180deg);
+}
+
+#mail {
+    height: 34px;
+    margin-top: -2px;
 }
